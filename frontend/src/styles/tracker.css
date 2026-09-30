@@ -1,0 +1,56 @@
+/* Tracker History Labels & Values */
+.today-label {
+  font-size: 0.8rem;
+  color: rgba(253, 245, 230, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.today-value-weight {
+  font-size: 2rem;
+  color: var(--cream);
+  font-weight: 600;
+}
+
+.today-value-cal {
+  font-size: 2rem;
+  color: var(--turmeric);
+  font-weight: 600;
+}
+
+/* Graph Spacing & Titles */
+.graph-empty {
+  margin-top: 2rem;
+}
+
+.graph-title-weight {
+  color: var(--cream);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.graph-title-cal {
+  color: var(--turmeric);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Recharts Custom Tooltip */
+.recharts-custom-tooltip {
+  background: #1a0a00;
+  border: 1px solid var(--turmeric);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.tooltip-label {
+  color: var(--saffron);
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.tooltip-value {
+  color: var(--cream);
+  margin: 0.2rem 0 0 0;
+  font-weight: bold;
+}
