@@ -1,0 +1,148 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2.5rem;
+  background: linear-gradient(to bottom, rgba(26, 10, 0, 0.97) 60%, transparent);
+  backdrop-filter: blur(4px);
+}
+
+.nav-logo {
+  font-size: 1.75rem;
+  color: var(--turmeric);
+  text-decoration: none;
+  text-shadow: 0 0 24px rgba(244, 168, 0, 0.35);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: rgba(253, 245, 230, 0.75);
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.25s, background 0.25s;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: "DM Sans", sans-serif;
+}
+
+.nav-link:hover,
+.nav-item:hover > .nav-link {
+  color: var(--turmeric);
+  background: rgba(244, 168, 0, 0.08);
+}
+
+.caret {
+  font-size: 0.58rem;
+  transition: transform 0.25s;
+  display: inline-block;
+}
+
+.nav-item:hover .caret {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: rgba(20, 6, 0, 0.98);
+  border: 1px solid rgba(244, 168, 0, 0.18);
+  border-radius: 14px;
+  min-width: 210px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
+}
+
+.nav-item:hover .nav-dropdown {
+  opacity: 1;
+  transform: none;
+  pointer-events: all;
+}
+
+.nav-dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.72rem 1.2rem;
+  color: rgba(253, 245, 230, 0.7);
+  text-decoration: none;
+  font-size: 0.84rem;
+  transition: background 0.2s, color 0.2s;
+  border-bottom: 1px solid rgba(244, 168, 0, 0.07);
+}
+
+.nav-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.nav-dropdown a:hover {
+  background: rgba(244, 168, 0, 0.1);
+  color: var(--turmeric);
+}
+
+.dd-icon {
+  font-size: 0.95rem;
+  width: 22px;
+  text-align: center;
+}
+
+.nav-divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(244, 168, 0, 0.15);
+  margin: 0 0.25rem;
+}
+
+.nav-calc-btn {
+  background: linear-gradient(135deg, var(--saffron), var(--turmeric));
+  color: #fff;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.87rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(255, 111, 0, 0.28);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.nav-calc-btn:hover {
+  opacity: 0.88;
+  transform: scale(1.04);
+}
+
+@media (max-width: 760px) {
+  nav {
+    padding: 0.85rem 1rem;
+  }
+  .nav-right {
+    gap: 0.1rem;
+  }
+}

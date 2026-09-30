@@ -1,0 +1,42 @@
+export const initialExerciseData = [
+  {
+    id: 1,
+    title: "Heavy Compound Lift",
+    category: "gym",
+    intensity: "High",
+    desc: "Deadlifts, squats, and bench presses focusing on progressive overload.",
+    ytLink: "https://youtube.com/watch?v=...",
+  },
+  {
+    id: 2,
+    title: "Explosive HIIT Circuit",
+    category: "hiit",
+    intensity: "Very High",
+    desc: "Burpees, mountain climbers, and jump squats designed for rapid calorie burn.",
+    ytLink: "https://youtube.com/watch?v=...",
+  },
+  {
+    id: 3,
+    title: "Bodyweight Core Flow",
+    category: "home",
+    intensity: "Moderate",
+    desc: "Planks, push-ups, and leg raises requiring zero equipment.",
+    ytLink: "https://youtube.com/watch?v=...",
+  },
+  {
+    id: 4,
+    title: "Senior Mobility & Yoga",
+    category: "age",
+    intensity: "Low",
+    desc: "Gentle joint rotations, chair yoga, and breathing exercises for longevity.",
+    ytLink: "https://youtube.com/watch?v=...",
+  },
+  {
+    id: 5,
+    title: "Youth Athletic Agility",
+    category: "age",
+    intensity: "High",
+    desc: "Coordination drills, ladder sprints, and foundational bodyweight control.",
+    ytLink: "https://youtube.com/watch?v=...",
+  },
+];
