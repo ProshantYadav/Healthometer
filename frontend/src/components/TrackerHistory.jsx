@@ -2,8 +2,6 @@ import React from "react";
 import {
   LineChart,
   Line,
-  AreaChart,
-  Area,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -55,9 +53,10 @@ export default function TrackerHistory({ logs }) {
         </div>
       ) : (
         <>
+          {/* GRAPH 1: WEIGHT (Fixed Height & LineChart) */}
           <div className="graph-container">
             <h4 className="graph-title-weight">Weight Trend</h4>
-            <ResponsiveContainer width="100%" height="85%">
+            <ResponsiveContainer width="100%" height={220}>
               <LineChart data={chartData}>
                 <CartesianGrid
                   strokeDasharray="3 3"
@@ -89,10 +88,11 @@ export default function TrackerHistory({ logs }) {
             </ResponsiveContainer>
           </div>
 
+          {/* GRAPH 2: CALORIES (Fixed Height & LineChart) */}
           <div className="graph-container">
             <h4 className="graph-title-cal">Caloric Intake</h4>
-            <ResponsiveContainer width="100%" height="85%">
-              <AreaChart data={chartData}>
+            <ResponsiveContainer width="100%" height={220}>
+              <LineChart data={chartData}>
                 <CartesianGrid
                   strokeDasharray="3 3"
                   stroke="rgba(255,255,255,0.05)"
@@ -104,21 +104,22 @@ export default function TrackerHistory({ logs }) {
                   tick={{ fill: "rgba(255,255,255,0.4)", fontSize: 12 }}
                 />
                 <YAxis
-                  domain={[0, "dataMax + 500"]}
+                  domain={["auto", "auto"]}
                   stroke="rgba(255,255,255,0.2)"
                   tick={{ fill: "rgba(255,255,255,0.4)", fontSize: 12 }}
                 />
                 <Tooltip content={<CustomTooltip />} />
-                <Area
+                <Line
                   type="monotone"
                   dataKey="calories"
                   name="calories"
                   stroke="var(--turmeric)"
-                  fill="rgba(244,168,0,0.2)"
-                  strokeWidth={2}
+                  strokeWidth={3}
+                  dot={{ r: 4, fill: "var(--turmeric)" }}
+                  activeDot={{ r: 6, fill: "var(--cream)" }}
                   connectNulls
                 />
-              </AreaChart>
+              </LineChart>
             </ResponsiveContainer>
           </div>
         </>
